@@ -22,147 +22,31 @@
                 <tbody>
                     <tr>
                         <td>System</td>
-                        <td>[몬스터 서바이벌 매일 첫 진입 포인트 지급, 추가 입장 제한 기능]<br/>
-                            몬스터 서바이벌 계정당 하루에 한번 첫 진입시 포인트 지급<br/>
-                            기존 시간당 입장 가능 횟수가 정해진 부분을 하루에 입장 가능 횟수가 제한되도록 변경
+                        <td>[맵 스킬]<br/>
+                            특정 맵에 진입시 이벤트 스킬을 사용 가능 하도록 작업<br/>
                         </td>
                     </tr>
                     <tr>
                         <td>System</td>
-                        <td><a href="https://www.sealonline.co.kr/Guide/Info?seq=593">
-                             [캐시 EX 코스튬 분해, 교환 기능]<br/></a>
-                             input에 따른 output이 무엇인지를 O(1)로 가능하게 처리
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>BulkUp</td>
-                        <td>[클래스 벌크업]<br/>
-                            전직업 특정 스킬들 기능 리뉴얼<br/>
-                            리뉴얼 과정중 발견된 기존에 있던 버그들 수정<br/>
-                            <a href="https://www.sealonline.co.kr/Board/View/notice/2348?searchType=both&searchKeyword=%EB%B2%8C%ED%81%AC%EC%97%85">
-                                1차 벌크업<br/></a>
-                            <a href="https://www.sealonline.co.kr/Board/View/notice/2356?searchType=both&searchKeyword=%EB%B2%8C%ED%81%AC%EC%97%85">
-                                2차 벌크업<br/></a>
-                            <a href="https://www.sealonline.co.kr/Board/View/notice/2365?searchType=both&searchKeyword=%EB%B2%8C%ED%81%AC%EC%97%85">
-                                3, 4차 벌크업<br/></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Environment</td>
-                        <td>[개발 환경 안정화]<br/>
-                            패킷 정리 및 문서화<br/>
-                            스킬 리팩토링(switch -> 함수 포인터 형식으로 변경)<br/>
-                            mysql, mssql, windows server 버전 업데이트 서포트 및 국내, 대만 적용<br/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Login</td>
-                        <td><a href="https://www.sealonline.co.kr/Board/View/notice/2399?searchType=both&searchKeyword=%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80">
-                            [curl 적용]<br/></a>
-                       </td>
-                    </tr>
-                    <tr>
-                        <td>Environment</td>
-                        <td>[C++ 개발 환경 구축 서포트]<br/>
-                            리눅스 C++ 빌드 서포트<br/>
-                            C함수에서 C++ 호출 기본 구조 설계 서포트<br/>
-                            C++ 테이블 로더 설계 및 개발(기존의 복붙 형식의 테이블 로드 개선)<br/>
+                        <td>[공성 성주의 성 포기]<br/>
+                            성을 소유한 성주가 성의 소유권을 포기 할 수 있도록 작업<br/>
                         </td>
                     </tr>
                     <tr>
                         <td>System</td>
-                        <td><a href=https://www.sealonline.co.kr/Guide/Info?seq=569>
-                            [출석, 접속 유지 보상 시스템]<br/></a>
-                            아이템 지급을 O(1)으로 가능하게 처리<br/>
-                            접속 할때, 버튼을 클릭할 때 데이터를 클라에 전송 하도록 하여 부하 감소<br/>
-                            DB 정보를 항상 SELECT 해오는 것이 아닌 flag를 사용하여 SELECT 최소화 하여 부하 감소<br/>
-                            접속 유지 시간 누적을 위해 타임 이벤트 추가<br/>
-                            원할한 테스트를 위한 치트 개발<br/>
-                       </td>
-                    </tr>
-                    <tr>
-                        <td>Server Consolidation</td>
-                        <td>[대만 서버 통합 서포트]<br/>
-                            테스트를 위한 테스트 서버 구축<br/>
-                            본섭 셋팅 변경<br/>
+                        <td>[운영툴의 서버 버프 확장]<br/>
+                            운영툴로 서버별 버프 이벤트 진행시 레벨 구간 별로 버프를 줄 수 있도록 작업<br/>
                         </td>
                     </tr>
                     <tr>
-                        <td>New Server</td>
-                        <td>[대만 신규 서버]<br/>
-                            서버 공통 이던 통합 맵, 캐시 상점을 구 서버, 신규 서버 분리 작업 진행(구조상 수백줄 이상 수정)<br/>
-                            테스트 서버, 본섭 구축<br/>
-                            분리에 따른 툴 작업 서포트<br/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>System</td>
-                        <td>[시스템 버프 시스템]<br/>
-                            기존엔 새로운 버프를 추가 하기 복잡한 구조<br/>
-                            새롭게 추가되는 버프들을 관리 및 추가하기 편하게 하기 위한 C++로 설계 및 개발<br/>
-                            버프의 능력, 발동 조건에 상관 없이 추가 하기 용이 하도록 설계 및 개발<br/>
-                            버프를 관리하는 BuffManager 클래스 설계 및 개발<br/>
-                            BuffManager는 map으로 버프 관리<br/>
-                            상속 구조로 새로운 버프를 추가 하기 쉽도록 설계 및 개발<br/>
-                            실제 버프 적용, 버프 해제를 하는 Buff 클래스 설계 및 개발<br/>
-                            랭킹 버프 클래스, 워프 버프 클래스, 패널티 버프 클래스 설계 및 개발<br/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>System</td>
-                        <td><a href=https://www.sealonline.co.kr/Guide/Info?seq=588>
-                            [인던 시스템]<br/></a>
-                            기존엔 새로운 인던을 추가 하기 복잡한 구조<br/>
-                            새롭게 추가되는 인던들을 관리 및 추가하기 편하게 하기 위한 C++로 설계 및 개발<br/>
-                            캐릭터 단위 입장, 계정 단위 입장 상관 없이 추가 하기 용이 하도록 설계 및 개발<br/>
-                            인던을 관리하는 IndunManager 클래스 설계 및 개발<br/>
-                            IndunManager는 map으로 인던 관리<br/>
-                            상속 구조로 새로운 인던을 추가 하기 쉽도록 설계 및 개발<br/>
-                            실제 인던 입장, 생성, 퇴장을 하는 Indun 클래스 설계 및 개발<br/>
-                            현자의 탑 하드 모드 클래스 설계 및 개발<br/>
-                            인던 한정 아이템 제작 기능 개발<br/>
-                            인던 한정 아이템 분해 기능 클래스 설계<br/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>System</td>
-                        <td><a href=https://www.sealonline.co.kr/Guide/Info?seq=594>
-                            [클론 코스튬]<br/></a>
-                            코스튬 위에 코스튬을 장착 할 수 있는 클론 코스튬 C++로 설계 및 개발<br/>
-                            기존에 C로 되어 있던 부분 C++로 리팩토링<br/>
-                            외형 관련된 코드가 있는 로그인 서버, 윈도우 서버, 리눅스 서버 코드 수정<br/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>System</td>
-                        <td><a href=https://www.sealonline.co.kr/Guide/Info?seq=598>
-                            [황금상자 자동 오픈]<br/></a>
-                            메인 BM 요소인 황금 상자 로직 수정<br/>
-                            기존 열쇠 클릭, 상자 오픈, 아이템 찾기 형식을 자동 오픈으로 변경 및 천장 수치 적용<br/>
-                            기존에 C로 되어 있던 부분 C++로 리팩토링<br/>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>System</td>
-                        <td><a href=https://www.sealonline.co.kr/Guide/Info?seq=600>
-                            [성장형 악세서리 추가]<br/></a>
-                            악세서리 아이템에 경험치 추가, 성장 기능 추가<br/>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>mysql DB</td>
-                        <td>컨텐츠 DB 설계, 함수 작성, 프로시저 작성<br/>
-                            데이터 추출, 아이템 지급 및 회수<br/>
-                            이벤트 관련 EX) 로그인 이벤트, 출석 이벤트, 접속 이벤트 등<br/>
+                        <td>mssql DB</td>
+                        <td>컨텐츠 DB 설계<br/>
                         </td>
                     </tr>
 
                     <tr>
                         <td>ETC</td>
-                        <td>캐시 아이템 복사 버그, 게임 머니 어뷰징, deadlock, out of memory 등 수정<br/>
-                            인수인계, 씰 PC 서버 파트 일정 관리<br/>
+                        <td>출시 초기 부터 있었던 간혈적 오브젝트 안보이는 문제 수정 및 기타 버그 수정<br/>
                         </td>
                     </tr>
                 </tbody>
